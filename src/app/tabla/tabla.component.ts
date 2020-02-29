@@ -11,21 +11,25 @@ export class TablaComponent implements OnInit, OnChanges {
 
   @Input() data: number[];
 
+  @Input() reg: string = 'x';
+
   column1: number[] = [];
   column2: number[] = [];
   column3: number[] = [];
+  column4: number[] = [];
 
   constructor() {
 
    }
 
   ngOnInit(): void {
-    this.title = this.title;
+
 
     for(let i=0;i<8;i++){
       this.column1[i]=this.data[i];
       this.column2[i]=this.data[8+i];
       this.column3[i]=this.data[16+i];
+      this.column4[i]=this.data[24+i];
     }
   }
 

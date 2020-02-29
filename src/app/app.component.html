@@ -283,7 +283,12 @@
 
 <app-latches-nav></app-latches-nav>
 
-<app-tabla [data]="data.Regs"></app-tabla>
+<ng-container >
+    <div class="row">
+      <app-tabla [data]="data.Regs" [title]="'RegsMemory'" [reg]="'Reg'"></app-tabla>
+      <app-tabla [data]="data.Regs" [title]="'DataMemory'" [reg]="'Dm'"></app-tabla>
+    </div>
+</ng-container>
 
 
 

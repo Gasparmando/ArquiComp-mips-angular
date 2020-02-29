@@ -1,12 +1,5 @@
 <div class="container">
-    <h2>Registros de Memoria</h2>
     <h3> {{ title }} </h3>
-    <table style="width: 100%;">
-        <tr>1</tr>
-        <tr>2</tr>
-
-
-    </table>
 
     <hr>
 
@@ -15,7 +8,10 @@
         <tbody>
              
                 <tr *ngFor="let item of column1; index as i">
-                    <td>Reg({{[i]}}) = {{ item }}</td>
+                    <td>{{reg}}({{[i]}}) = {{ column1[i] }}</td>
+                    <td>{{reg}}({{[i+8]}}) = {{ column2[i] }}</td>
+                    <td>{{reg}}({{[i+16]}}) = {{ column3[i] }}</td>
+                    <td>{{reg}}({{[i]}}) = {{ column4[i] }}</td>
                 </tr>
             
         </tbody>
