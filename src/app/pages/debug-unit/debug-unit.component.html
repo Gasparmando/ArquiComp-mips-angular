@@ -1,8 +1,26 @@
-<div class="row">
-    
-    <app-card [name]="'PC'" [data]="data.pc"></app-card>
-    <app-card [name]="'Iteracion'" [data]="data.iteration"></app-card>
-    <app-card [name]="'NextPC'" [data]="data.pc + 4"></app-card>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <app-card [name]="'PC'" [data]="data.pc"></app-card>
+        </div>
+        <div class="col-sm">
+            <app-card [name]="'Iteracion'" [data]="data.iteration"></app-card>
+        </div>
+        <div class="col-sm">
+            <app-card [name]="'NextPC'" [data]="data.pc + 4"></app-card>
+        </div>
+    </div>
 </div>
 
 
+<div class="row">
+    
+    <app-table [reg]="'R'" [data]="data.Regs">
+        <h1>Registros de Memoria</h1>
+        <p>Datos de la memoria de Registros de la etapa ID</p>
+    </app-table>
+    <app-table [reg]="'DM'" [data]="data.DataMemory">
+        <h1>Data Memory</h1>
+        <p>Datos de la memoria de Datos de la etapa MEM</p>
+    </app-table>
+</div>

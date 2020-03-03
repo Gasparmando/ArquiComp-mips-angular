@@ -1,6 +1,6 @@
 <div class="container">
-    <h3 style="text-align: center; font-family: fantasy;"> {{ title }} </h3>
     <hr>
+    <ng-content></ng-content>
     <table class="table table-bordered table-active">
         <tbody>
             <tr *ngFor="let item of column1; index as i">
