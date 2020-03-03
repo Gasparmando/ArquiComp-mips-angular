@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { MipsData } from './cores/models/mips-data'
-
+import { MipsData } from 'src/app/cores/models/mips-data';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component2.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-debug-unit',
+  templateUrl: './debug-unit.component.html',
+  styleUrls: ['./debug-unit.component.scss']
 })
-export class AppComponent implements OnInit {
-
-
-  title = 'mips-controller';
+export class DebugUnitComponent implements OnInit {
 
   data: MipsData;
+
+  
+  constructor() { }
 
   ngOnInit(): void {
 

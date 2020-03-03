@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-tabla',
-  templateUrl: './tabla.component.html',
-  styleUrls: ['./tabla.component.scss']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss']
 })
-export class TablaComponent implements OnInit, OnChanges {
+export class TableComponent implements OnInit, OnChanges {
 
   @Input() title: string;
 
@@ -36,4 +36,5 @@ export class TablaComponent implements OnInit, OnChanges {
   ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
 
   }
+
 }

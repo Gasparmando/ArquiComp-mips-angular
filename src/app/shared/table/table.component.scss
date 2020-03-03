@@ -1,0 +1,13 @@
+table  {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background: radial-gradient(100% 100% at 50% 0%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #62c016;
+    border-style: dashed;
+    
+  }
+
+  th, td{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 18px;
+  }

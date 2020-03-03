@@ -1,0 +1,14 @@
+<div class="container">
+    <h3 style="text-align: center; font-family: fantasy;"> {{ title }} </h3>
+    <hr>
+    <table class="table table-bordered table-active">
+        <tbody>
+            <tr *ngFor="let item of column1; index as i">
+                <td>{{reg}}({{[i]}}) = {{ column1[i] }}</td>
+                <td>{{reg}}({{[i+8]}}) = {{ column2[i] }}</td>
+                <td>{{reg}}({{[i+16]}}) = {{ column3[i] }}</td>
+                <td>{{reg}}({{[i]}}) = {{ column4[i] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
