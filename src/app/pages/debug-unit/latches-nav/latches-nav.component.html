@@ -1,25 +1,36 @@
 <div class="card text-center">
-    <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link" href="#">IF/ID</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ID/EXE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">EXE/MEM</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">MEM/WB</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled tab</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card-body">
-      <h4 class="card-title">Title</h4>
-      <p class="card-text">Body</p>
+  <div class="card-header">
+    <input  #selection value="IFID">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item ">
+        <button class="nav-link" (click)="selection.value = 'IFID'"
+          [ngClass]="{active: selection.value=='IFID'}">IF/ID</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" (click)="selection.value = 'IDEXE' "
+          [ngClass]="{active: selection.value=='IDEXE'}">ID/EXE</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" (click)="selection.value = 'EXEMEM' "
+          [ngClass]="{active: selection.value=='EXEMEM'}">EXE/MEM</button>
+      </li>
+
+      <li class="nav-item">
+        <button class="nav-link" (click)="selection.value = 'MEMWB' "
+          [ngClass]="{active: selection.value=='MEMWB'}">MEM/WB</button>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{selection.value}}</h4>
+    
+
+    <div class="terminal" [ngSwitch]="selection.value">
+      <pre *ngSwitchDefault>ng generate component xyz</pre>
+      <pre *ngSwitchCase="'IFID'"> <app-latch [obj]="latches.ifid"></app-latch></pre>
+      <pre *ngSwitchCase="'IDEXE'"><app-latch [obj]="latches.idex"></app-latch></pre>
+      <pre *ngSwitchCase="'EXEMEM'"><app-latch [obj]="latches.exemem"></app-latch></pre>
+      <pre *ngSwitchCase="'MEMWB'"><app-latch [obj]="latches.memwb"></app-latch></pre>
     </div>
   </div>
+</div>

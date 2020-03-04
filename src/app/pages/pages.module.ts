@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DebugUnitComponent } from './debug-unit/debug-unit.component';
-import { AppModule } from '../app.module';
 import { FeaturesModule } from '../features/features.module';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
+import { LatchesNavComponent } from './debug-unit/latches-nav/latches-nav.component';
+import { LatchComponent } from './debug-unit/latches-nav/latch/latch.component';
 
 
 
 @NgModule({
-  declarations: [DebugUnitComponent, HomeComponent],
+  declarations: [DebugUnitComponent, HomeComponent, LatchesNavComponent, LatchComponent] ,
   imports: [
     CommonModule,
     FeaturesModule,
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
   ],
   exports: [
     DebugUnitComponent,
-    HomeComponent
+    HomeComponent,
+    LatchesNavComponent
   ]
 })
 export class PagesModule { }

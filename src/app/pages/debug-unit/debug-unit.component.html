@@ -12,7 +12,6 @@
     </div>
 </div>
 
-
 <div class="row">
     
     <app-table [reg]="'R'" [data]="data.Regs">
@@ -24,3 +23,6 @@
         <p>Datos de la memoria de Datos de la etapa MEM</p>
     </app-table>
 </div>
+
+
+<app-latches-nav [latches]="{ifid: data.IFID, idex: data.IDEX, exemem: data.EXMEM, memwb: data.MEMWB}"></app-latches-nav>

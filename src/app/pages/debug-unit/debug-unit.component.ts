@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MipsData } from 'src/app/cores/models/mips-data';
+import { isObject } from 'util';
 
 @Component({
   selector: 'app-debug-unit',
@@ -10,7 +11,17 @@ export class DebugUnitComponent implements OnInit {
 
   data: MipsData;
 
-  
+
+  listita = function listita(obj:any) {
+    for (const key in obj) {
+      if (isObject(obj[key])) {
+         listita(obj[key])        
+      }else{
+        console.log(`El objeto ${key} es ${obj[key]}`)
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,8 +29,8 @@ export class DebugUnitComponent implements OnInit {
     this.data = {
       pc: 24,
       iteration: 6,
-      Regs: [0,1,2,3,4,5,6,7,8,9,10,1,12,13,14,15,16,17,18,20,19,21,22,23,24,25,26,27,28,29,30,31],
-      DataMemory: [0,0,0,0,0,5,6,7,8,9,0,1,12,0,14,15,0,17,18,20,19,0,22,23,24,25,26,27,28,29,30,0],
+      Regs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 12, 13, 14, 15, 16, 17, 18, 20, 19, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+      DataMemory: [0, 0, 0, 0, 0, 5, 6, 7, 8, 9, 0, 1, 12, 0, 14, 15, 0, 17, 18, 20, 19, 0, 22, 23, 24, 25, 26, 27, 28, 29, 30, 0],
       IFID: {
         pc: 20,
         instruction: 0b00101000001000100101001010101010
@@ -113,6 +124,14 @@ export class DebugUnitComponent implements OnInit {
 
 
     }
+
+    // this.listita(this.data)
+
+
+
+
   }
+
+
 
 }
