@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DebugUnitComponent } from './debug-unit/debug-unit.component';
 import { FeaturesModule } from '../features/features.module';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { LatchesNavComponent } from './debug-unit/latches-nav/latches-nav.component';
-import { LatchComponent } from './debug-unit/latches-nav/latch/latch.component';
+import { DebugUnitComponent } from './home/debug-unit/debug-unit.component';
+import { LatchesNavComponent } from './home/debug-unit/latches-nav/latches-nav.component';
+import { LatchComponent } from './home/debug-unit/latches-nav/latch/latch.component';
+import { CompiladorComponent } from './home/compilador/compilador.component';
+
 
 
 
 @NgModule({
-  declarations: [DebugUnitComponent, HomeComponent, LatchesNavComponent, LatchComponent] ,
+  declarations: [DebugUnitComponent, HomeComponent, LatchesNavComponent, LatchComponent, CompiladorComponent] ,
   imports: [
     CommonModule,
     FeaturesModule,

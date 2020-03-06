@@ -17,9 +17,8 @@ export class LatchComponent implements OnInit {
   @Input() obj : IFIDLatch | IDEXLatch | EXMEMLatch | MEMWBLatch
 
   ngOnInit(): void {
-
-    console.log(this.obj)
-  }
+    
+    }
 
 
   listita = function listita(obj:any) {
