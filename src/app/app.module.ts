@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PagesModule } from './pages/pages.module';
+import { SerialPortService } from './cores/services/serialPort/serial-port.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PagesModule } from './pages/pages.module';
     SharedModule,
     PagesModule
   ],
-  providers: [],
+  providers: [SerialPortService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

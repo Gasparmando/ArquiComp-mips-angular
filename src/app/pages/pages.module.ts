@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { LatchesNavComponent } from './debug-unit/latches-nav/latches-nav.component';
 import { LatchComponent } from './debug-unit/latches-nav/latch/latch.component';
+import { SerialPortService } from '../cores/services/serialPort/serial-port.service';
 
 
 

@@ -21,8 +21,6 @@ export class LatchesNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-    console.log(this.latches)
   }
 
 }
