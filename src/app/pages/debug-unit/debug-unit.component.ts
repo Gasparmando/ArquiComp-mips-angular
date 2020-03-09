@@ -12,6 +12,8 @@ export class DebugUnitComponent implements OnInit {
 
   data: MipsData;
 
+  serie: number;
+
 
   listita = function listita(obj:any) {
     for (const key in obj) {
@@ -30,6 +32,16 @@ export class DebugUnitComponent implements OnInit {
     this.data = this._serialport.getMipsData();
     this._serialport.pruebas();
 
+    this.serie = 0;
+
+  }
+
+  public setSerie(serie:number){
+    this.serie=serie;
+  }
+
+  public refresh(){
+    
   }
 
 

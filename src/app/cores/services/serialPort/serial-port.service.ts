@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
+ 
+declare function armar32bits(a,b,c,d) : any;
 
 @Injectable({
   providedIn: 'root'
 })
 export class SerialPortService {
-
-  
 
   constructor() {   }
 
@@ -130,7 +130,7 @@ export class SerialPortService {
     //   if (err) {
     //     return console.log('Error on write: ', err.message)
     //   }
-    //   console.log('message written')
+      console.log( armar32bits(64,64,64,64))
     // })
 
   }
