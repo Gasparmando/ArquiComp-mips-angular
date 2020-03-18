@@ -9,6 +9,6 @@ import { CompilerService } from './services/compiler.service';
   imports: [
     CommonModule
   ],
-  exports: [CompilerService]
+  exports: []
 })
 export class CoresModule { }

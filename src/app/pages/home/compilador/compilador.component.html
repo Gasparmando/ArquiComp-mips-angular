@@ -1,25 +1,48 @@
-<div class="input-group">
-    <div class="input-group-prepend">
-        <span class="input-group-text">Archivo .asm</span>
+<div class="container">
+    <div class="row">
+        <div class="col col-7">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Archivo .asm</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" placeholder="Insertar programa en Assembler"
+                    name="programa" #prog></textarea>
+            </div>
+            
+            <button type="button" class="btn btn-success" (click)="onClick(prog.value)">Compilar</button>
+
+            <button type="button" class="btn btn-danger" (click)="onClickCargar(text)" [ngClass]="{'disabled  btn-dark': !exito}">Cargar</button>
+            
+            
+            
+            
+            <div class="alert alert-success" role="alert" *ngIf="exito && run">
+                Binario generado
+            </div>
+            
+            
+            <div class="alert alert-danger" role="alert" *ngIf="!exito && run">
+                Fallo la compilacion
+            </div>
+            
+
+        </div>
+        <div class="col">
+
+            
+                <div *ngFor="let linea of text.split('\n')">
+                    {{linea}}
+                    <br>
+                </div>
+
+                
+
+            
+
+        </div>
+
     </div>
-    <textarea class="form-control" aria-label="With textarea" placeholder="Insertar programa en Assembler"></textarea>
 </div>
-
-<button type="button" class="btn btn-success">Compilar</button>
-
-
-<button type="button" class="btn btn-danger">Cargar</button>
-
-
-<div class="alert alert-success" role="alert">
-    Programa enviado!
-</div>
-
-
-<div class="alert alert-danger" role="alert">
-    Fallo la compilacion
-</div>
-
 
 <hr>
 
