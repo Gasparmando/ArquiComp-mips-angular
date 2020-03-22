@@ -11,9 +11,11 @@ import { HazardDetectionUnit } from "./hazard-detection-unit";
 
 export interface MipsData {
     pc: number;
-    iteration: number
+    pcNext: number;
+    iteration: number;
     Regs: number[];
     DataMemory: number[];
+    ProgramMemory: number[];
     IFID : IFIDLatch;
     IDEX: IDEXLatch;
     EXMEM: EXMEMLatch;

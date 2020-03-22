@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <hr>
     <ng-content></ng-content>
     <table class="table table-bordered table-active">
@@ -11,4 +11,17 @@
             </tr>
         </tbody>
     </table>
+</div> -->
+
+
+<div class="container">
+    <hr>
+    <ng-content></ng-content>
+    <div class="container table">
+        <div class="row ">
+            <div class="col col-3 td" *ngFor="let item of data; index as i">
+                {{reg}}({{[i]}}) = {{ item }}
+            </div>
+        </div>
+    </div>
 </div>

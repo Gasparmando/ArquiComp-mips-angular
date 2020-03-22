@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompilerService } from 'src/app/cores/services/compiler.service';
+import { SerialPortService } from 'src/app/cores/services/serial-port.service';
 
 @Component({
   selector: 'app-compilador',
@@ -11,11 +12,18 @@ export class CompiladorComponent implements OnInit {
   exito: boolean = false;
   run: boolean = false;
 
+  datomips: any = ''
+
   text: string = ''
 
-  constructor(private compilerService: CompilerService) { }
+  constructor(private compilerService: CompilerService, private serv: SerialPortService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.serv.listen('mips-data').subscribe((data) => {
+      
+      this.datomips = data;
+    })
+  }
 
   compilar(s: string) {
 
@@ -28,6 +36,8 @@ export class CompiladorComponent implements OnInit {
     this.run = true;
   }
 
-  onClickCargar(s: string) {}
+  onClickCargar(s: string) {
+    this.serv.emit('evento-mensaje','Hola Gente');
+  }
 
 }

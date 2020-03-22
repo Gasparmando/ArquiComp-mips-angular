@@ -1,3 +1,10 @@
+
+<div style="text-align: center;">
+    <button type="button" class="btn btn-dark disabled">Run</button>
+
+    <button type="button" class="btn btn-primary" (click)="onClickDebug()">Step</button>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-sm">
@@ -7,7 +14,7 @@
             <app-card [name]="'Iteracion'" [data]="data.iteration"></app-card>
         </div>
         <div class="col-sm">
-            <app-card [name]="'NextPC'" [data]="data.pc + 4"></app-card>
+            <app-card [name]="'NextPC'" [data]="data.pcNext"></app-card>
         </div>
     </div>
 </div>
