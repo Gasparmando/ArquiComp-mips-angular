@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "mips-controller": {
@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mips-controller"
+    }
+  },
+  "defaultProject": "mips-controller",
+  "cli": {
+    "analytics": "2e969a58-1391-437f-addc-e2772756c8a4"
+  }
 }

@@ -1,11 +1,10 @@
-import { ControlRegister } from "./control-register";
-import { IFIDLatch } from "./latches/IFIDLatch";
-import { IDEXLatch } from "./latches/IDEXLatch";
-import { EXMEMLatch } from "./latches/EXMEMLatch";
-
-import { MEMWBLatch } from "./latches/MEMWBLatch";
 import { ForwardingUnit } from "./forwarding-unit";
 import { HazardDetectionUnit } from "./hazard-detection-unit";
+import { EXMEMLatch } from './latches/exmemlatch';
+import { IDEXLatch } from './latches/idexlatch';
+import { IFIDLatch } from './latches/ifidlatch';
+import { MEMWBLatch } from './latches/memwblatch';
+
 
 
 

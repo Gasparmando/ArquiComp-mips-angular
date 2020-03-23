@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { IFIDLatch } from 'src/app/cores/models/latches/IFIDLatch';
-import { IDEXLatch } from 'src/app/cores/models/latches/IDEXLatch';
-import { EXMEMLatch } from 'src/app/cores/models/latches/EXMEMLatch';
-import { MEMWBLatch } from 'src/app/cores/models/latches/MEMWBLatch';
+import { Component, Input, OnInit } from '@angular/core';
+import { EXMEMLatch } from 'src/app/cores/models/latches/exmemlatch';
+import { IDEXLatch } from 'src/app/cores/models/latches/idexlatch';
+import { IFIDLatch } from 'src/app/cores/models/latches/ifidlatch';
+import { MEMWBLatch } from 'src/app/cores/models/latches/memwblatch';
 
 @Component({
   selector: 'app-latches-nav',

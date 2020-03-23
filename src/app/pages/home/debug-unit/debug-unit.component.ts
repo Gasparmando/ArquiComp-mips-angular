@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MipsData } from 'src/app/cores/models/mips-data';
-import { isObject } from 'util';
 import { DataProviderService } from 'src/app/cores/services/data-provider.service';
 
 @Component({
