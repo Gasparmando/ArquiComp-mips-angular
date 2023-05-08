@@ -23,7 +23,7 @@
     "bootstrap": "^4.4.1",
     "browser-serialport": "^2.1.0",
     "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper": "^1.0.1",
     "rxjs": "~6.5.4",
     "serialport": "^8.0.7",
